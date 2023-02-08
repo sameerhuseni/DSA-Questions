@@ -1,0 +1,20 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+     int a,b,c,d;
+ Scanner sc = new Scanner(System.in);
+      a=sc.nextInt();
+      b=sc.nextInt();
+      c=sc.nextInt();
+      d=sc.nextInt();
+    int  total_marks=a+b+c+d;
+      int percentage=(total_marks * 100/400);
+      System.out.println(percentage); 
+      
+                     // Your code here
+    }
+}
