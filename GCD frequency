@@ -1,0 +1,38 @@
+//gcd
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+   public static int gcd(int a,int n){
+       int i,result=0;
+       for (i=a;i>0;i--){
+           if (a%i==0 && n%i==0){
+               result=i;
+               break;
+           }
+       }
+       return result;
+   }
+    public static void main (String[] args) {
+       Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt();
+       int arr[]=new int[n];
+       int sum=0;
+       for (int i=0;i<n;i++){
+           arr[i]=sc.nextInt();
+       }
+       for (int i=0;i<n;i++){
+           int count =0;
+           for (int j=0; j<n;j++){
+               if (arr[i]==arr[j]){
+                   count++;
+               }
+           }
+           int m=gcd(arr[i],count);
+               sum=sum+m;
+       }
+       System.out.print(sum);
+    }   
+}
