@@ -1,0 +1,37 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+                      // Your code here
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = (b*b) - (4*a*c);
+        // roots
+        double r11, r12, r21, r22;
+        // for real roots
+        if(d >= 0) {
+            r11 = (-1 * b);
+            r12 = Math.pow(d, 0.5);
+            System.out.printf("%.2f", (r11 + r12)/(2*a));
+            System.out.println();
+            System.out.printf("%.2f", (r11 - r12)/(2*a));
+        } // for imaginary roots
+        else {
+            d = (-1 * d);
+            r11 =(double) (-1 * b)/(2*a);
+            r12 = (Math.pow(d, 0.5))/(2*a);
+            System.out.printf("%.2f", r11);
+            System.out.print("+" + "i");
+            System.out.printf("%.2f", r12);
+            System.out.println();
+            System.out.printf("%.2f", r11);
+            System.out.print("-" + "i");
+            System.out.printf("%.2f", r12);
+        }
+    }
+}          // Your code here
