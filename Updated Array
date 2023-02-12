@@ -1,0 +1,50 @@
+//Updated Array
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+                      // Your code here
+                      Scanner sc = new Scanner(System.in);
+                      int n = sc.nextInt();
+
+                      int [] arr =new int[n];
+                      for(int i=0;i<n;i++){
+                          arr[i]=sc.nextInt();
+                      }
+                      int q = sc.nextInt();
+                        int size = n;
+                        int front=0;
+                        int end=n-1;
+                      while(q-->0){
+                          int x = sc.nextInt();
+
+                          if(x==1){
+                              front++;
+                                size--;
+                          }
+                          else if(x==2){
+                              arr[front+1]=arr[front];
+                              front++;
+                              size--;
+                              }
+                            else if(x==3){
+                                end--;
+                                size--;
+
+                            }
+                            else if(x==4){
+                                arr[end-1]=arr[end];
+                                end--;
+                                size--;
+                            }
+                      }
+                      System.out.println(size);
+
+                      for(int i=front;i<=end;i++){
+                          System.out.print(arr[i]+" ");
+                      }
+    }
+}
