@@ -1,0 +1,24 @@
+/*PALINDROME IN DOUBLY LINKED LIST
+
+*/
+ static boolean isPalin( Node left)
+    {
+        // Write your code here
+        Node right = left;
+         int size=1;
+        while(right.next!=null){
+           right=right.next;
+           size++;
+        }
+        size=size/2;
+        for(int i=0;i<size;i++){
+           if(right.data!=left.data){
+              return false;
+           }
+           left=left.next;
+            right = right.prev;
+
+        }
+        return true;
+
+    }
