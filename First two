@@ -1,0 +1,7 @@
+static int firstTwo(int N){
+String str = Integer.toString(N);
+int res=0;
+res+=(str.charAt(1)-'0');
+res=(res*10+(str.charAt(0)-'0'));
+return res;
+}
