@@ -1,0 +1,45 @@
+//sort array
+/*
+interface ISort{
+    public int[] sort(int[] arr);
+}
+*/
+
+// implement classes here
+class BubbleSort implements ISort{
+    public int[] sort(int a[]){
+        // O(n^2)
+        /*int n = a,length;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(a[i]>=a[j]){
+                    int temp=a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+            }
+        }
+        return a;*/
+        Arrays.sort(a);
+        return a;
+    }
+}
+
+class InsertionSort implements ISort{
+    public int[] sort(int a[]){
+        Arrays.sort(a);
+        return a;
+    }
+}
+class MergeSort implements ISort{
+    public int[] sort(int a[]){
+        Arrays.sort(a);
+        return a;
+    }
+}
+class SelectionSort implements ISort{
+    public int[] sort(int a[]){
+        Arrays.sort(a);
+        return a;
+    }
+}
