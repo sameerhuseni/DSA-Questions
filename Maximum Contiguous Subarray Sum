@@ -1,0 +1,51 @@
+import java.io.*; // for handling input/output
+ import java.util.*; // contains Collections framework
+ 
+ // don't change the name of this class
+ // you can add inner classes if needed
+ class Main {
+ 
+     public static void maxPossSumCont(int arr[],int n){
+         // 100000
+         // 1000000
+ 
+         long maxContSum=-10000000; //ans
+         long prefSum=0;
+ 
+         for(int i=0;i<n;i++){
+             prefSum=prefSum+arr[i];
+ 
+             if(prefSum>maxContSum){
+                 maxContSum=prefSum;
+             }
+ 
+             if(prefSum<0){
+                 prefSum=0;
+             }
+         }
+         System.out.println(maxContSum);
+     }
+ 
+ 
+     //1 2 3 4 -10 -4 20
+ 
+     // prefSum. 20
+     //maxContSum 20
+ 
+     public static void main (String[] args) {
+          Scanner sc=new Scanner(System.in);
+          int t=sc.nextInt();
+          while(t-- > 0){
+              int n=sc.nextInt();
+              int arr[]=new int[n];
+              for(int i=0;i<n;i++){
+                  arr[i]=sc.nextInt();
+              }
+ 
+ 
+             //Kadane's algo
+             maxPossSumCont(arr,n);
+ 
+          }
+     }
+ }
