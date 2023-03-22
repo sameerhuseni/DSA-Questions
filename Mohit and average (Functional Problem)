@@ -1,5 +1,0 @@
-static int Average(int A,int B, int C){
-//Enter your code here
- int avg = (A+B+C)/3;
- return avg;
-}
